@@ -29,4 +29,3 @@ print(prime(970))
 
 
 
-
