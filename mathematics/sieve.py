@@ -22,8 +22,33 @@ def sieve(n):
                 print(i,end = " ")
 
 
-sieve(6)
+# sieve(6)
 
 
+def sieve2(N):
+
+    if N<=1:
+        return []
+    
+    isPrime = [True] * (N+1)
+
+    isPrime[0] = isPrime[1] = False
+    i=2
+    while (i*i<=N):
+        if isPrime[i] == True:
+            for m in range(i*i,N+1,i):
+                isPrime[m]=False
+        i+=1
+    return [i for i in range(0,N+1) if isPrime[i]==True]
+
+def check(N):
+
+    isPrime = sieve2(N)
+    for i in isPrime:
+        if i*i <=N:
+            print(i*i)
+        
+
+check(30)
 
 
