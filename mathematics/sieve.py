@@ -45,10 +45,9 @@ def check(N):
 
     isPrime = sieve2(N)
     for i in isPrime:
-        if i*i <=N:
-            print(i*i)
-        
+        if i*i>N:
+            break
+        print(i*i)
 
 check(30)
-
 
