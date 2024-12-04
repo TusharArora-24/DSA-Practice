@@ -42,7 +42,7 @@ def sieve2(N):
     return [i for i in range(0,N+1) if isPrime[i]==True]
 
 def check(N):
-
+    n = int
     isPrime = sieve2(N)
     for i in isPrime:
         if i*i>N:
