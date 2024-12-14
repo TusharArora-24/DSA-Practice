@@ -1,16 +1,19 @@
 
-def cp(x,n): 
-    
+
+def computing_pow(x,n):
+
     if n==0:
         return 1
     
-    if n%2==0:
-        temp = cp(x,n//2)
+    temp = computing_pow(x, n // 2)
+
+    if n%2 == 0:
+        # temp = computing_pow(x, n // 2)
         return temp*temp
+    
     else:
-        return cp(x,n-1)*x 
+        # return temp*temp*x
+        return computing_pow(x,n-1)*3
+    
+print(computing_pow(3,4))
 
-
-
-
-print(cp(7,4))
