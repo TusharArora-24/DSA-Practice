@@ -28,57 +28,32 @@ def get_all_divisors(n):
         i-=1
 
 # get_all_divisors(25) 
-def sieve(N):
-    if N<=1:
-        return
-    isPrime = [True] * (N+1)
-    
-    isPrime[0] = isPrime[1] = False
-    i=2
-    while(i*i<N):
-        if(isPrime[i]==True):
-            for p in range(2*i,N+1,i):
-                isPrime[p] = False
-            
-        i+=1
-    return isPrime 
 
 
-def exactly3Divisors(N):
-        # code here
+
+
+def check_prime(self,n):
         
-    final_div_count = 0
-    isPrime = sieve(N)
-    print(isPrime)
-    for i in range(2,N+1):
-        if(isPrime[i]==True and i*i<=N):
-            final_div_count+=1
-
-    return final_div_count
-            
-
-
-print(exactly3Divisors(50))
-def sieve(self, limit):
-        if limit <= 1:
-            return []
-        isPrime = [True] * (limit + 1)
-        isPrime[0] = isPrime[1] = False
-        i = 2
-        while i * i <= limit:
-            if isPrime[i]:
-                for p in range(i * i, limit + 1, i):
-                    isPrime[p] = False
-            i += 1
-        return [i for i in range(limit + 1) if isPrime[i]]
-
-def exactly3Divisors(self, N):
-    limit = int(N**0.5)
-    primes = self.sieve(limit)
+        if n==2 or n==3:
+            return True
+        if n%2==0 or n%3==0:
+            return False
+        
+        i=5
+        while(i*i<=n):
+            if n%i == 0 or n%(i+2)==0:
+                return False
+            i+=6
+        return True
     
-    count = 0
-    for prime in primes:
-        if prime * prime <= N:
-            count += 1
+def exactly3Divisors(self,N):
+    # code here
+    import math
+    i=2
+    count=0
+    while(i<=math.sqrt(N)):
+        if self.check_prime(i) == True and i*i<=N:
+            count+=1
+        i+=1    
     return count
 
