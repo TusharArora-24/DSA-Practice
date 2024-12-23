@@ -2,17 +2,14 @@
 
 # 0 1 1 2 3 5 8
 
-
-def fib(n):
-    if n<=0:
+def fibonacci(n):
+        #code here
+        # 1 1 2 3 5
+    if n==0:
+        return 0
+    if n==1:
         return 1
+        
+    return fibonacci(n-1) + fibonacci(n-2)
 
-    # fib(n-1)
-    return fib(n-1)+fib(n-2)
-
-print(fib(4))   
-# n=5
-# sum = 0
-# for i in range(0,n):
-#     print(sum + sum,end = " ")
-#     sum+=1
+print(fibonacci(20))
