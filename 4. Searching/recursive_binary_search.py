@@ -1,7 +1,7 @@
 
 
 def rec_bs(arr,x,low,high):
-    mid = (low + high)//2
+    mid = (low + (high-low))//2
 
     if low>high:
         return -1
@@ -12,8 +12,8 @@ def rec_bs(arr,x,low,high):
     elif arr[mid]<x:
         return rec_bs(arr,x,low+1,high)
 
-arr = [10,15,20,30,40,50]
-x = 30
+arr = [10,10,20,30,40,40,40]
+x = 20
 
 print(rec_bs(arr,x,0,len(arr)-1))
 
