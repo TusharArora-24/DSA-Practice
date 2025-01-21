@@ -29,7 +29,7 @@ def fo(arr,k,low,high):
             else:high = mid - 1
     return False
 
-arr = [10,10,20,20,30,40,40,40]
+arr = [5,10,10,15,20,20,20]
 x = 20
 
 low = 0
