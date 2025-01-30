@@ -2,10 +2,11 @@
 
 def last_occurence(arr,low,high,x):
 
-    mid = (low+high)//2
-    print(mid)
+    
+    # print(mid)
     while low<=high:
-        print(low,high)
+        mid = (low+high)//2
+        # print(low,high)
         if arr[mid] < x:
             low = mid + 1
         elif arr[mid] > x :
@@ -21,7 +22,7 @@ def last_occurence(arr,low,high,x):
 arr = [10,20,20,30,30,30,40,50,50]
 
 
-print(last_occurence(arr,0,8,20))
+print(last_occurence(arr,0,8,50))
 
 
 
