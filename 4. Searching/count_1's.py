@@ -26,7 +26,7 @@ def count(arr):
     return 0
 
 
-arr = [1,0,0,0]
+arr = [1 ,1 ,1 ,1, 1, 0, 0 ,0]
 print(count(arr))
 
 
