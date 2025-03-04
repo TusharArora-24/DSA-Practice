@@ -17,3 +17,25 @@ def fun(s):
 s = ["No","More","Excuses"]
 s.sort(key=fun,reverse=True)
 print(s)
+
+
+
+
+class Point:
+
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+
+
+def myfun(p):
+    return p.x
+
+l2 = [Point(1,15), Point(4,2), Point(3,10)]
+
+l2.sort(key=myfun)
+
+for i in l2:
+    print(i.x)
+
+        
