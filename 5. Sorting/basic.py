@@ -39,3 +39,9 @@ for i in l2:
     print(i.x)
 
         
+
+ls = [69,-12,4,-40]
+
+ms = sorted(ls,key = abs)
+print(ms)
+
