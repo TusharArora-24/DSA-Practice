@@ -3,7 +3,7 @@
 def sqr_rt(x):
 
     low = 1
-    high = x
+    high = x//2
     ans = -1
 
     while low<=high:
@@ -19,4 +19,4 @@ def sqr_rt(x):
             ans = mid
     return ans
 
-print(sqr_rt(123321))
+print(sqr_rt(10))
