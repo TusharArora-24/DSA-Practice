@@ -31,7 +31,7 @@ def msa(arr,low,mid,high):
         j = j+1
         k=k+1
 
-    # print(arr)
+    print(arr)
 
 def MS(arr,l,r):
 
@@ -41,7 +41,7 @@ def MS(arr,l,r):
         MS(arr,m+1,r)
         msa(arr,l,m,r)
 
-        print(arr)
+    # print(arr)
 
 arr = [10,5,30,15,7]
 MS(arr,0,4)
