@@ -29,7 +29,7 @@ def UnionSort(a,b):
     while i<m:
         if index!=0 and a[i]==result[index-1]:
                 # index=index+1
-                i=i+1
+            i=i+1
         else:
             result[index] = a[i]
             index=index+1
