@@ -12,18 +12,11 @@ def Intersection(a,b):
     while i<m and j<n:
         print(i, j, a[i] if i < m else None, b[j] if j < n else None)
         if a[i]==b[j]:
-            if index!=0 and result[index-1]!=a[i]:
+            if index==0 or result[index-1]!=a[i]:
                 result[index]=a[i]
                 i+=1
                 j+=1
                 index+=1
-                # print(result)
-            elif index==0:
-                result[index]=a[i]
-                i+=1
-                j+=1
-                index+=1
-                # print(result,i,j,index)
             else:
                 i+=1
                 j+=1
@@ -36,7 +29,7 @@ def Intersection(a,b):
 
     return result[:index]
 
-a = [1,1,3,3,3]
-b = [1,1,1,1,3,5,7]
+a = [1,1,1,2,3]
+b = [1,1,2]
 
 print(Intersection(a,b))
