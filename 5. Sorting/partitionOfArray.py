@@ -1,28 +1,18 @@
 
 
-def partition(arr,p):
+def LomutoPartition(arr,l,h):
+    p = arr[h]
+    i = l-1
 
-    i = 0
-    while i<len(arr):
-        if arr[i]<arr[p]:
-            if i<p:
-                i+=1
-            else:
-                arr[p],arr[i] = arr[i],arr[p]
-                p = i
-                i+=1
-        elif arr[p]<arr[i]:
-            if i<p:
-                arr[i],arr[p] = arr[p],arr[i]
-                p = i
-                i+=1
-            else:
-                i+=1
+    for j in range(l,h):
+        if arr[j]<=p:
+            i = i+1
+            arr[i],arr[j] = arr[j],arr[i]
     
+    arr[i+1],arr[h] = arr[h],arr[i+1]
     print(arr)
+    return i+1
 
 arr = [3,8,6,7,12,10,7]
-p = 2
-partition(arr,p)
-
-
+l,h = 0,6
+print(LomutoPartition(arr,l,h))
