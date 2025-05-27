@@ -4,7 +4,7 @@ def Intersection(a,b):
 
     m = len(a)
     n = len(b)
-    i=0
+    i = 0
     j = 0
     index = 0
     result = [0 for _ in range(min(m,n))]
