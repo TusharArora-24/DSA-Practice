@@ -35,7 +35,7 @@ def HoarePartition(arr,l,h):
     
 
 # arr = [3,8,6,12,10,7]
-arr = [5,3,8,4,2,7,1,10]
+arr = [5,3,8,4,2,7,1,1]
 l,h = 0,7
 # print(LomutoPartition(arr,l,h))
 print(HoarePartition(arr,l,h))
